@@ -1,0 +1,15 @@
+{
+  "name": "vacation-manager",
+  "version": "1.0.0",
+  "description": "Client of MongoDB",
+  "scripts": {
+    "start": "node app/app_create_collection.js",
+    "test": "test"
+  },
+  "author": "Gatomek",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.1.9"
+  }
+}
