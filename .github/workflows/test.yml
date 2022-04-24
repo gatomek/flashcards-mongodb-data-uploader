@@ -6,6 +6,8 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-18.04
     steps:
+      - run: mkdir data
+      - run: mkdir uploader
       - run: git clone https://github.com/gatomek/flashcards-data.git
         working-directory: data
       - run: git clone https://github.com/gatomek/flashcards-mongodb-data-uploader.git
