@@ -1,7 +1,12 @@
 name: test
+
 on:
    repository_dispatch:
    workflow_dispatch:
+
+env:
+   FOLDER: data/flashcards-data/data
+  
 jobs:
   check-bats-version:
     runs-on: ubuntu-18.04
@@ -22,4 +27,8 @@ jobs:
       - run: ls -l
       - run: ls -l ..
       - run: node uploader/app/drop_entries
+        env:
+           MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
       - run: node uploader/app/upload_entries
+        env: 
+           MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
