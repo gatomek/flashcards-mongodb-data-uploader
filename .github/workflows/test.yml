@@ -7,13 +7,18 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
+        working-directory: uploader
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - uses: actions/checkout@main
+        working-directory: uploader
+      - name: Data repo pulling ...
+        uses: actions/checkout@main
         with:
           name: gatomek/flashcards-data
+        working-directory: data
       - run: npm install
+        working-directory: uploader
       - run: pwd
       - run: ls -l
       - run: ls -l ..
