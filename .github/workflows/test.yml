@@ -18,6 +18,7 @@ jobs:
           name: gatomek/flashcards-data
           path: ./data
       - run: npm install
+        working-directory: ./uploader
       - run: pwd
       - run: ls -l
       - run: ls -l ..
