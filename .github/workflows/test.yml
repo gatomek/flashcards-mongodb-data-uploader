@@ -8,15 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: ./uploader
+          path: uploader
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
       - uses: actions/checkout@main
         with:
           name: gatomek/flashcards-data
-          path: ./data
-      - run: npm --project-dir ./uploader install
+          path: data
+      - run: npm install
+        working-directory: ./uploader
       - run: pwd
       - run: ls -l
       - run: ls -l ..
