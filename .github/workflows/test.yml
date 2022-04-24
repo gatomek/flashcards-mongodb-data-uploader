@@ -14,25 +14,23 @@ jobs:
       - uses: actions/checkout@v3
         with:
           path: uploader
+
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+
       - uses: actions/checkout@main
         with:
           repository: gatomek/flashcards-data
           path: data
+
       - run: npm install
         working-directory: ./uploader
-      - run: pwd
-      - run: ls -l
-      - run: ls -l ..
-      - run: ls -l data
-      - run: ls -l uploader
-      - run: cat data/README.md
-      - run: cat uploader/README.md
+
       - run: node uploader/app/drop_entries
         env:
            MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+
       - run: node uploader/app/upload_entries
         env: 
            MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
