@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@main
         with:
           name: gatomek/flashcards-data
-          ref: refs/heads/release
       - run: npm install
       - run: pwd
       - run: ls -l
