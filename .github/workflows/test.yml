@@ -12,13 +12,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - name: data repo pulling ...
-        uses: actions/checkout@main
+      - uses: actions/checkout@main
         with:
           name: gatomek/flashcards-data
           path: ./data
-      - run: npm install
-        working-directory: ./uploader
+      - run: npm --project-dir ./uploader install
       - run: pwd
       - run: ls -l
       - run: ls -l ..
