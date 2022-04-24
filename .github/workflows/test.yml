@@ -27,6 +27,7 @@ jobs:
       - run: ls -l
       - run: ls -l ..
       - run: ls -l data
+      - run: ls -l uploader
       - run: node uploader/app/drop_entries
         env:
            MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
