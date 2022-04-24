@@ -3,9 +3,6 @@ name: test
 on:
    repository_dispatch:
    workflow_dispatch:
-
-env:
-   FOLDER: data/data
   
 jobs:
   check-bats-version:
@@ -34,3 +31,4 @@ jobs:
       - run: node uploader/app/upload_entries
         env: 
            MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+           FOLDER: data/data
