@@ -9,8 +9,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '14'    
+          node-version: '14'
       - run: npm install
       - run: git clone https://github.com/gatomek/flashcards-data.git
+      - run: pwd
+      - run: ls -l
       - run: node app/drop_entries
       - run: node app/upload_entries
