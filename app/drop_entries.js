@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
-const { credentials } = require( './config')
-const connectionString = credentials.mongoDbConnection
-
+const connectionString = process.env.MONGODB_CONNECTION_STRING
+       
 const main = () =>
 {
     console.time( "elapsed");
