@@ -6,8 +6,15 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-18.04
     steps:
+      - run: git clone https://github.com/gatomek/flashcards-data.git
+        working-directory: data
+      - run: git clone https://github.com/gatomek/flashcards-mongodb-data-uploader.git
+        working-directory: uploader
+      - run: npm install
+        working-directory: uploader
       - run: pwd
       - run: ls -l
       - run: ls -l ..
-      - run: node app/drop_entries
-      - run: node app/upload_entries
+      - run: ls -l ../..
+
+
