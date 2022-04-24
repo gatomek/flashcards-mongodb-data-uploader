@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
       - uses: actions/checkout@main
         with:
-          name: gatomek/flashcards-data
+          repository: gatomek/flashcards-data
           path: data
       - run: npm install
         working-directory: ./uploader
