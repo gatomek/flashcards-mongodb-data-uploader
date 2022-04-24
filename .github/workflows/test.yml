@@ -21,5 +21,5 @@ jobs:
       - run: pwd
       - run: ls -l
       - run: ls -l ..
-      - run: node app/drop_entries
-      - run: node app/upload_entries
+      - run: node uploader/app/drop_entries
+      - run: node uploader/app/upload_entries
