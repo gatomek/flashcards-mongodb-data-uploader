@@ -16,5 +16,6 @@ jobs:
       - run: npm install
       - run: pwd
       - run: ls -l
+      - run: ls -l ..
       - run: node app/drop_entries
       - run: node app/upload_entries
