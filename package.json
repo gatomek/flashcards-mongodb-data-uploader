@@ -9,7 +9,6 @@
   "author": "Gatomek",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.0",
     "mongoose": "^6.1.9"
   }
 }
