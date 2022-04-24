@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: ./uploader
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
